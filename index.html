@@ -1,33 +1,942 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mentorgence - Coming Soon</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="content">
-        <img src="logo.svg" alt="Mentorgence Logo" class="logo" />
-        <h1>We have something for you.</h1>
-        <p>We are going to launch our website soon.</p>
-        <div class="social-icons">
-          <a href="https://www.threads.net/@mentorgence/" target="_blank">
-            <img src="Vector-3.png" alt="Threads" />
-          </a>
-          <a href="https://wa.me/message/SPYCZMLRHTJZD1" target="_blank">
-            <img src="icons8-whatsapp-48.png" alt="WhatsApp Icon" />
-          </a>
-          <a href="https://www.instagram.com/mentorgence/" target="_blank">
-            <img src="icons8-insta-48.png" alt="Instagram Icon" />
-          </a>
-          <a href="https://www.facebook.com/mentorgence/" target="_blank">
-            <img src="icons8-fb-48.png" alt="Facebook Icon" />
-          </a>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorgence</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- ========================================= -->
+    <!--           Start: Full Navigation Bar      -->
+    <!-- ========================================= -->
+
+    <div class="navbar">
+        <div class="logo">
+            <div class="child">
+                <img src="images/Group.svg" alt="Logo">
+            </div>
+            <div class="child"> </div>
         </div>
-      </div>
+        <div class="links_section">
+            <div class="links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+            <div class="btn">
+                <div class="button">
+                    <a href="">Register Now</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+
+    <div class="mnavbar" id="mb_home">
+        <div class="mlogo">
+            <div class="mchild">
+                <img src="images/Group.svg" alt="Mobile Logo">
+            </div>
+            <div class="mchild"></div>
+        </div>
+        <div class="mlinks_section">
+            <div class="mbtn">
+                <div class="mbutton">
+                    <a href="">Register Now</a>
+                </div>
+            </div>
+            <button class="toggle-btn" onclick="toggleMenu()">☰</button> <!-- Toggle Button -->
+
+        </div>
+    </div>
+    <div class="menu-overlay" id="menuOverlay"></div> <!-- Background overlay -->
+    <div class="mb_links" id="mbLinks">
+        <button class="close-btn" onclick="toggleMenu()">✕</button> <!-- Close button -->
+        <ul>
+            <li><a href="#mb_home">Home</a></li>
+            <li><a href="#mb_about">About Us</a></li>
+            <li><a href="#mb_support">Support</a></li>
+        </ul>
+    </div>
+
+    <!-- JavaScript to handle the toggle -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mbLinks');
+            const overlay = document.getElementById('menuOverlay');
+            menu.classList.toggle('show');
+            overlay.classList.toggle('show');
+        }
+         // Close menu when a link is clicked
+    const menuLinks = document.querySelectorAll('.mb_links a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            toggleMenu();
+        });
+    });
+    </script>
+
+
+    <!-- ========================================= -->
+    <!--           End: Full Navigation Bar        -->
+    <!-- ========================================= -->
+
+
+
+
+    <!-- ========================================= -->
+    <!--           Start: hero section     -->
+    <!-- ========================================= -->
+    <div class="herosection">
+        <div class="left_container">
+            <div class="ltop">
+                <h1>Your Trusted Guide to</h1>
+                <h2>Global Education</h2>
+                <p>At MentorGence, we are dedicated to providing students with trusted guidance on their journey to
+                    pursuing
+                    higher education abroad. We work closely with students, parents, and partner universities to create
+                    clear
+                    pathways to global learning opportunities.</p>
+            </div>
+            <div class="lbtom">
+                <h3>Patnered with</h3>
+                <div class="logos">
+                    <img src="images/ulogo.svg" alt="Harvard University">
+                    <img src="images/ulogo2.svg" alt="University of Michigan">
+                </div>
+
+            </div>
+
+        </div>
+        <div class="right_container">
+            <div class="lftshape">
+                <img src="images/Patterns.svg" alt="">
+            </div>
+            <div class="rgtimg">
+                <img src="images/Image 1.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: "Poppins", sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+        .left_container {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .ltop {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ltop h1 {
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 76.8px;
+            color: #000000;
+            font-weight: bold;
+            width: 80%;
+        }
+
+        .ltop h2 {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 61.44px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #92193B;
+
+        }
+
+        .ltop p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-top: 2%;
+            width: 80%;
+
+
+        }
+
+        .lbtom {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            gap: 10%;
+            margin-top: 7%;
+        }
+
+        .lbtom h3 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 32px;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+        }
+
+        .logos {
+            display: flex;
+            gap: 10%;
+
+            justify-content: space-evenly;
+        }
+
+        .logos img {}
+
+        .right_container {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .lftshape {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .rgtimg {
+            width: 70%;
+            height: 100%;
+            display: flex;
+
+        }
+
+        .rgtimg img {
+            margin-top: -5%;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .lftshape img {
+
+            width: 200%;
+            height: 200%;
+        }
+    </style>
+    <div class="mb_herosection">
+        <div class="mb_left">
+            <img src="images/Patterns.svg" alt="">
+        </div>
+        <div class="mb_right">
+            <img src="images/Image 1.svg" alt="">
+        </div>
+    </div>
+
+
+    <!-- ========================================= -->
+    <!--           end: hero section               -->
+    <!-- ========================================= -->
+
+
+
+
+
+    <!-- ========================================= -->
+    <!--           Start: about section     -->
+    <!-- ========================================= -->
+    <div class="about_us" id="about" >
+        <div class="shape1">
+            <img src="images/sidel.svg" alt="">
+        </div>
+        <div class="aboutus_text">
+            <h>We Guarantee the <span>Best Service</span> </h>
+        </div>
+        <div class="shape2">
+            <img src="images/sider.svg" alt="">
+        </div>
+    </div>
+
+    <div class="mb_herotexts">
+        <h1>Your Trusted GUIDE </h1>
+        <h3>to Global Education</h3>
+        <p>We believe that education opens doors to a world of possibilities, and our mission is to support students in
+            making informed decisions.</p>
+    </div>
+
+
+    <!-- ========================================= -->
+    <!--           end: about section     -->
+    <!-- ========================================= -->
+
+    <div class="mb_box" id="mb_about">
+        <div class="lside">
+            <img src="images/sidel.svg" alt="">
+        </div>
+        <div class="midd">
+            <h>We Guarantee the <span>Best Service </span></h>
+        </div>
+        <div class="rside">
+            <img src="images/sider.svg" alt="">
+        </div>
+    </div>
+
+
+    <div class="mb_whyus">
+        <h>Why choose <span>Mentorgence?</span></h1>
+    </div>
+
+
+    <div class="mb_service_list" >
+
+        <div class="sbox on" style="background: #F5F9FE;">
+            <div class="circle" style="background: #B5E7E8;"></div>
+            <h3>Ethical Guidance</h3>
+            <div class="go"><img src="images/XMLID 1522.svg" alt=""></div>
+        </div>
+        <div class="sbox of" style="    background: #ffffff;">
+            <div class="circle" style="background: #FFE8B3;"></div>
+            <h3>Focus on Student Success</h3>
+            <div class="go"><img src="images/XMLID 1522.svg" alt=""></div>
+        </div>
+        <div class="sbox on" style="    background: #F5F9FE;">
+            <div class="circle" style="background: #DDD5FE;"></div>
+            <h3>Authorized University Agent</h3>
+            <div class="go"><img src="images/XMLID 1522.svg" alt=""></div>
+        </div>
+        <div class="sbox of" style="    background: #ffffff;">
+            <div class="circle" style="background: #FFE8B3;"></div>
+            <h3>Transparent Services</h3>
+            <div class="go"><img src="images/XMLID 1522.svg" alt=""></div>
+        </div>
+        <div class="sbox " style="    background: #F5F9FE;">
+            <div class="circle" style="background: #B5E7E8;"></div>
+            <h3>Comprehensive Support</h3>
+            <div class="go"><img src="images/XMLID 1522.svg" alt=""></div>
+        </div>
+    </div>
+
+    <div class="service" id="careers">
+        <div class="service_container">
+
+            <div class="title">
+                <h3>Why choose <span>Mentorgence?</span></h3>
+
+                <img src="images/Pattern 3.svg" alt="">
+            </div>
+            <div class="service_list">
+                <div class="sbox off">
+
+                </div>
+                <div class="sbox onn" style="background: #F5F9FE;">
+                    <div class="circle" style="background: #B5E7E8;"></div>
+                    <h3>Ethical Guidance</h3>
+                    <div class="go"><img src="images/XMLID 1522.svg" alt=""></div>
+                </div>
+                <div class="sbox onn" style="    background: #ffffff;">
+                    <div class="circle" style="background: #FFE8B3;"></div>
+                    <h3>Focus on Student Success</h3>
+                    <div class="go"><img src="images/XMLID 1522.svg" alt=""></div>
+                </div>
+                <div class="sbox onn" style="    background: #F5F9FE;">
+                    <div class="circle" style="background: #DDD5FE;"></div>
+                    <h3>Authorized University Agent</h3>
+                    <div class="go"><img src="images/XMLID 1522.svg" alt=""></div>
+                </div>
+                <div class="sbox onn" style="    background: #ffffff;">
+                    <div class="circle" style="background: #FFE8B3;"></div>
+                    <h3>Transparent Services</h3>
+                    <div class="go"><img src="images/XMLID 1522.svg" alt=""></div>
+                </div>
+                <div class="sbox onn" style="    background: #F5F9FE;">
+                    <div class="circle" style="background: #B5E7E8;"></div>
+                    <h3>Comprehensive Support</h3>
+                    <div class="go"><img src="images/XMLID 1522.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="p4">
+            <img src="images/Pattern 4.svg" alt="">
+        </div>
+    </div>
+
+    <div class="howwework">
+        <div class="topl">
+            <img src="images/image-removebg-preview.png" alt="">
+        </div>
+        <div class="topr">
+            <h2>How We <span>works</span></h2>
+        </div>
+    </div>
+    <div class="worklist">
+        <div class="bx">
+            <div class="circle" style="background: #FFE8B3  ; margin-left:10%; "></div>
+            <h3>Values</h3>
+            <p>Integrity, commitment, and student success are our core values.</p>
+        </div>
+        <div class="bx">
+            <div class="circle" style="background: #ECE5FF;margin-left:10%;"></div>
+            <h3>Mission</h3>
+            <p>We guide students to make informed choices for higher education.</p>
+        </div>
+        <div class="bx">
+            <div class="circle" style="background: #CBF9F7; margin-left:10%; "></div>
+            <h3>Focus</h3>
+            <p>Helping students secure placements in top global universities.</p>
+        </div>
+    </div>
+
+    <div class="whysection">
+        <div class="top">
+            <h2>Our <span>Values</span> and <span>Mission </span></h2>
+        </div>
+        <div class="middile">
+            <div class="ybox" id="one">
+                <div class="circle" id="q" style="background: #FFE8B3;"></div>
+                <h3>Values</h3>
+                <p>Integrity, commitment, and student success are our core values.</p>
+
+            </div>
+            <div class="ybox" id="two">
+                <div class="circle" style="background: #DDD5FE;"></div>
+                <h3>Mission</h3>
+                <p>We guide students to make informed choices for higher education.</p>
+            </div>
+            <div class="ybox" id="three">
+                <div class="circle" style="background: #B5E7E8;"></div>
+                <h3>Focus</h3>
+                <p>Helping students secure placements in top global universities.</p>
+            </div>
+        </div>
+        <div class="bottom">
+
+        </div>
+    </div>
+    <div class="mb_university" id="mb_location">
+        <div class="mb_container">
+            <h1 class="section-title">Top Universities</h1>
+
+            <!-- Image Slider Container -->
+            <div class="mb_slider-container" id="mb_sliderContainer">
+                <!-- Image Slider -->
+                <div class="mb_slider" id="mb_universitySlider">
+                    <!-- The first image (from the 0th index) will be displayed here -->
+                </div>
+            </div>
+
+            <!-- View More Button -->
+            <div class="mb_view-more">
+                <button id="mb_viewMoreBtn">View More</button>
+            </div>
+
+            <!-- Grid of all universities (hidden initially) -->
+            <div class="mb_university-grid" id="mb_universityGrid"></div>
+        </div>
+
+        <script>
+            // List of universities
+            const mb_universities = [
+                { img: "images/img.svg", name: "New York University" },
+                { img: "images/Image 1-1.svg", name: "Columbia University" },
+                { img: "images/Image 3.svg", name: "University Of Maryland" },
+                { img: "images/img.svg", name: "Harvard University" },
+                { img: "images/Image 1-1.svg", name: "Stanford University" },
+                { img: "images/Image 3.svg", name: "MIT" },
+                { img: "images/img.svg", name: "University of California" },
+                { img: "images/Image 1-1.svg", name: "Oxford University" },
+                { img: "images/Image 3.svg", name: "Cambridge University" }
+            ];
+
+            const mb_universitySlider = document.getElementById("mb_universitySlider");
+            const mb_viewMoreBtn = document.getElementById("mb_viewMoreBtn");
+            const mb_universityGrid = document.getElementById("mb_universityGrid");
+
+            let mb_currentIndex = 0;
+            let mb_isAnimating = false;  // Prevent overlapping animations
+            let mb_isViewMoreClicked = false; // Flag to disable animation after clicking "View More"
+
+            // Function to render the slider with the current university image
+            function mb_renderSlider() {
+                if (mb_isAnimating || mb_isViewMoreClicked) return; // Prevent animation overlap and if "View More" clicked
+
+                mb_isAnimating = true;
+
+                const mb_university = mb_universities[mb_currentIndex];
+                mb_universitySlider.innerHTML = `
+                    <div class="university-card">
+                        <img src="${mb_university.img}" alt="${mb_university.name}">
+                        <h3>${mb_university.name}</h3>
+                    </div>
+                `;
+
+                // Trigger the "out" animation first, then the "in" animation
+                mb_universitySlider.classList.remove('animate-out', 'animate-in', 'scale-in', 'scale-out');
+                void mb_universitySlider.offsetWidth; // Reflow to restart the animation
+                mb_universitySlider.classList.add('animate-out', 'scale-out');
+
+                // Wait for the out animation to finish before starting the in animation
+                setTimeout(() => {
+                    mb_universitySlider.classList.remove('animate-out', 'scale-out');
+                    mb_universitySlider.classList.add('animate-in', 'scale-in');
+                    mb_isAnimating = false; // Allow animation to finish
+                }, 500); // Out animation duration is 0.5s
+            }
+
+            // Function to load and display all universities (without animations)
+            function mb_renderAllUniversities() {
+                mb_universityGrid.innerHTML = ""; // Clear any previous content
+                mb_universities.forEach(mb_university => {
+                    const mb_card = document.createElement("div");
+                    mb_card.classList.add("university-card");
+                    mb_card.innerHTML = `
+                        <img src="${mb_university.img}" alt="${mb_university.name}">
+                        <h3>${mb_university.name}</h3>
+                    `;
+                    mb_universityGrid.appendChild(mb_card);
+                });
+                mb_universityGrid.style.display = "grid"; // Show the grid
+            }
+
+            // Show all universities when "View More" is clicked
+            mb_viewMoreBtn.addEventListener("click", () => {
+                mb_isViewMoreClicked = true; // Disable animations
+                mb_renderAllUniversities(); // Render all universities without animation
+                mb_viewMoreBtn.style.display = "none"; // Hide the button after showing all
+                mb_universitySlider.style.display = "none"; // Hide the first image after "View More" is clicked
+            });
+
+            // Automatic sliding (every 5 seconds)
+            setInterval(() => {
+                if (!mb_isViewMoreClicked) { // Only slide if "View More" hasn't been clicked
+                    mb_currentIndex = (mb_currentIndex + 1) % mb_universities.length;
+                    mb_renderSlider();
+                }
+            }, 6000); // 6 seconds interval for slower transition
+
+            // Initial render for the first image (from the 0th index)
+            mb_currentIndex = 0; // Start with the 0th index
+            mb_renderSlider();
+        </script>
+
+        <style>
+            /* Styling for the slider container */
+            .mb_slider-container {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* Image card styling */
+            .university-card {
+                width: 100%;
+                text-align: center;
+            }
+
+            .university-card img {
+                width: 100%;
+                border-radius: 5px;
+            }
+
+            /* Styling for the View More button */
+            .mb_view-more {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            #mb_viewMoreBtn {
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            /* Grid styling (hidden initially) */
+            .mb_university-grid {
+                display: none;
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .mb_university-grid .university-card {
+                border-radius: 5px;
+            }
+
+            /* Keyframe animation for the "out" effect */
+            @keyframes slide-out {
+                0% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: translateX(-100%);
+                }
+            }
+
+            /* Keyframe animation for the "in" effect */
+            @keyframes slide-in {
+                0% {
+                    opacity: 0;
+                    transform: translateX(100%);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            /* Keyframe animation for the "out" scaling effect */
+            @keyframes scale-out {
+                0% {}
+
+                100% {
+                    opacity: 0;
+                    transition: 0.5s;
+                }
+            }
+
+            /* Keyframe animation for the "in" scaling effect */
+            @keyframes scale-in {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                    transition: 0.5s;
+                }
+            }
+
+            /* Adding the "out" animation */
+            .mb_slider.animate-out {
+                animation: slide-out 0.5s ease-in-out, scale-out 0.5s ease-in-out;
+            }
+
+            /* Adding the "in" animation */
+            .mb_slider.animate-in {
+                animation: slide-in 1s ease-in-out, scale-in 1s ease-in-out;
+            }
+        </style>
+    </div>
+
+
+
+
+    <div class="container" id="location">
+        <div class="ct">
+            <h1 class="section-title">Top Universities</h1>
+            <div class="view-more">
+                <button id="viewMoreBtn">View More</button>
+            </div>
+        </div>
+        <div class="university-grid" id="universityGrid"></div>
+
+    </div>
+
+
+
+    <script>
+        // List of universities
+        const universities = [
+            { img: "images/img.svg", name: "New York University" },
+            { img: "images/Image 1-1.svg", name: "Columbia University" },
+            { img: "images/Image 3.svg", name: "University Of Maryland" },
+            { img: "images/img.svg", name: "Harvard University" },
+            { img: "images/Image 1-1.svg", name: "Stanford University" },
+            { img: "images/Image 3.svg", name: "MIT" },
+            { img: "images/img.svg", name: "University of California" },
+            { img: "images/Image 1-1.svg", name: "Oxford University" },
+            { img: "images/Image 3.svg", name: "Cambridge University" }
+        ];
+
+        const universityGrid = document.getElementById("universityGrid");
+        const viewMoreBtn = document.getElementById("viewMoreBtn");
+
+        // Initially show only the first 3 universities
+        let visibleCount = 3;
+
+        // Function to render universities
+        function renderUniversities() {
+            universityGrid.innerHTML = ""; // Clear the grid
+            universities.slice(0, visibleCount).forEach(university => {
+                const card = document.createElement("div");
+                card.classList.add("university-card");
+
+                card.innerHTML = `
+                
+            <img src="${university.img}" alt="${university.name}">
+            <h3>${university.name}</h3> `;
+
+                universityGrid.appendChild(card);
+            });
+        }
+
+        // Load all universities on "View More" click
+        viewMoreBtn.addEventListener("click", () => {
+            visibleCount = universities.length; // Show all universities
+            renderUniversities();
+            viewMoreBtn.style.display = "none"; // Hide the button after showing all
+        });
+
+        // Initial render
+        renderUniversities();
+
+    </script>
+
+    <div class="sfooter" id="support" >
+        <div class="ftop">
+            <div class="lshp">
+                <img src="images/Pattern 5.svg" alt="">
+            </div>
+            <div class="midd">
+                <div class="mt">
+                    <h3>Know more about our services</h3>
+                </div>
+                <div class="mb">
+                    <button class="btn-filled">Make an Appoinment</button>
+                    <button class="btn-unfilled">Contact Us </button>
+                </div>
+            </div>
+            <div class="rshp">
+                <img src="images/Pattern 6.svg" alt="">
+            </div>
+        </div>
+        <div class="fbottom">
+            <footer class="footer">
+                <div class="footer-container">
+                    <!-- Contact Section -->
+                    <div class="contact-section">
+                        <div class="contact-item">
+                            <img src="icons8-whatsapp-50.png" alt="WhatsApp" class="icon" />
+                            <span>+971 561625698</span>
+                        </div>
+                        <div class="contact-item">
+                            <img src="images/Vector (1).svg" alt="Email" class="icon" />
+                            <span>me2gence@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="social-icons">
+                        <a href="#" class="social-link">
+                            <img src="images/Vector-1.svg" alt="Threads" class="icon" />
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="images/g2.svg" alt="Instagram" class="icon" />
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="images/Vector.svg" alt="Facebook" class="icon" />
+                        </a>
+                    </div>
+
+                    <!-- Links Section -->
+                    <div class="links-section">
+                        <div class="link-group">
+                            <ul>
+
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#location">Location</a></li>
+                                <li><a href="#careers">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <p>© 2022 Blackboard India Pvt. Ltd. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div class="mb_sfooter">
+
+        <div class="ft_top">
+            <div class="l">
+
+            </div>
+            <div class="m">
+                <h3>Know more about our services</h3>
+                <div class="ft_mb">
+                    <button class="ft_mb_btn-filled">Make an Appoinment</button>
+                    <button class="ft_mb_btn-unfilled">Contact Us </button>
+                </div>
+            </div>
+            <div class="r">
+
+            </div>
+        </div>
+        <style>
+            .ft_top {
+                width: 100%;
+                height: 30%;
+                background-color: #92193b;
+
+
+            }
+
+            .ft_top .l {
+
+                width: 10%;
+                height: 100%;
+                background-image: url("images/Pattern\ 5.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                float: left;
+            }
+
+            .ft_top .m {
+                width: 80%;
+                height: 100%;
+                background-color: #92193b;
+                float: left;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-family: Poppins;
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 36px;
+                text-align: center;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                color: white;
+            }
+
+            .ft_top .r {
+                width: 10%;
+                height: 100%;
+                background-color: #92193b;
+                float: left;
+            }
+
+            .ft_mb_btn-filled {
+                height: 50px;
+                background: #ffffff;
+                border: none;
+                border-radius: 5px;
+                color: var(--primary);
+                font-size: 1.2rem;
+                transition: 0.5s;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 19.2px;
+                letter-spacing: 0.02em;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                width: max-content;
+                padding: 5px;
+                transition: 1s;
+
+
+            }
+
+            .ft_mb_btn-unfilled {
+                transition: 1s;
+
+                margin: 10px;
+                height: 50px;
+                border-radius: 5px;
+                border: 1px white solid;
+                background: #ffffff00;
+                color: white;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 19.2px;
+                letter-spacing: 0.02em;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                width: max-content;
+                padding: 5px;
+
+            }
+
+            .ft_mb {
+                margin-top: 5%;
+            }
+        </style>
+        <div class="mb_fbottom" id="mb_support">
+            <footer class="mb_footer">
+                <div class="mb_footer-container">
+                    <!-- Contact Section -->
+                    <div class="mb_contact-section">
+                        <div class="mb_contact-item">
+                            <img src="icons8-whatsapp-50.png" alt="WhatsApp" class="mb_icon" />
+                            <h5>+971 561625698</h5>
+                        </div>
+                        <div class="mb_contact-item">
+                            <img src="images/Vector (1).svg" alt="Email" class="mb_icon" />
+                            <h5>me2gence@gmail.com</h5>
+                        </div>
+                    </div>
+                    <div class="mb_social-icons">
+                        <a href="https://www.threads.net/@mentorgence/" class="mb_social-link">
+                            <img src="images/Vector-1.svg" alt="Threads" class="mb_icon" />
+                        </a>
+                        <a href="https://www.instagram.com/mentorgence/" class="mb_social-link">
+                            <img src="images/g2.svg" alt="Instagram" class="mb_icon" />
+                        </a>
+                        <a href="https://www.facebook.com/mentorgence/" class="mb_social-link">
+                            <img src="images/Vector.svg" alt="Facebook" class="mb_icon" />
+                        </a>
+                    </div>
+                    <div class="mb_nav-links">
+                        <a href="#mb_about">About Us</a>
+                        <a href="#mb_support">Support</a>
+                        <a href="#mb_home">Home</a>
+                    </div>
+            </footer>
+            <div class="mb_footer-bottom">
+                <p>© 2022 Blackboard India Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
 </html>
