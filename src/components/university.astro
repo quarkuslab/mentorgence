@@ -1,0 +1,277 @@
+ <div class="mb_university" id="mb_location">
+        <div class="mb_container">
+            <h1 class="section-title">Top Universities</h1>
+
+            <!-- Image Slider Container -->
+            <div class="mb_slider-container" id="mb_sliderContainer">
+                <!-- Image Slider -->
+                <div class="mb_slider" id="mb_universitySlider">
+                    <!-- The first image (from the 0th index) will be displayed here -->
+                </div>
+            </div>
+
+            <!-- View More Button -->
+            <div class="mb_view-more">
+                <button id="mb_viewMoreBtn">View More</button>
+            </div>
+
+            <!-- Grid of all universities (hidden initially) -->
+            <div class="mb_university-grid" id="mb_universityGrid"></div>
+        </div>
+
+        <script>
+            // List of universities
+            const mb_universities = [
+                { img: "img.svg", name: "New York University" },
+                { img: "Image 1-1.svg", name: "Columbia University" },
+                { img: "Image 3.svg", name: "University Of Maryland" },
+                { img: "img.svg", name: "Harvard University" },
+                { img: "Image 1-1.svg", name: "Stanford University" },
+                { img: "Image 3.svg", name: "MIT" },
+                { img: "img.svg", name: "University of California" },
+                { img: "Image 1-1.svg", name: "Oxford University" },
+                { img: "Image 3.svg", name: "Cambridge University" }
+            ];
+
+            const mb_universitySlider = document.getElementById("mb_universitySlider");
+            const mb_viewMoreBtn = document.getElementById("mb_viewMoreBtn");
+            const mb_universityGrid = document.getElementById("mb_universityGrid");
+
+            let mb_currentIndex = 0;
+            let mb_isAnimating = false;  // Prevent overlapping animations
+            let mb_isViewMoreClicked = false; // Flag to disable animation after clicking "View More"
+
+            // Function to render the slider with the current university image
+            function mb_renderSlider() {
+                if (mb_isAnimating || mb_isViewMoreClicked) return; // Prevent animation overlap and if "View More" clicked
+
+                mb_isAnimating = true;
+
+                const mb_university = mb_universities[mb_currentIndex];
+                mb_universitySlider.innerHTML = `
+                    <div class="university-card">
+                        <img src="${mb_university.img}" alt="${mb_university.name}">
+                        <h3>${mb_university.name}</h3>
+                    </div>
+                `;
+
+                // Trigger the "out" animation first, then the "in" animation
+                mb_universitySlider.classList.remove('animate-out', 'animate-in', 'scale-in', 'scale-out');
+                void mb_universitySlider.offsetWidth; // Reflow to restart the animation
+                mb_universitySlider.classList.add('animate-out', 'scale-out');
+
+                // Wait for the out animation to finish before starting the in animation
+                setTimeout(() => {
+                    mb_universitySlider.classList.remove('animate-out', 'scale-out');
+                    mb_universitySlider.classList.add('animate-in', 'scale-in');
+                    mb_isAnimating = false; // Allow animation to finish
+                }, 500); // Out animation duration is 0.5s
+            }
+
+            // Function to load and display all universities (without animations)
+            function mb_renderAllUniversities() {
+                mb_universityGrid.innerHTML = ""; // Clear any previous content
+                mb_universities.forEach(mb_university => {
+                    const mb_card = document.createElement("div");
+                    mb_card.classList.add("university-card");
+                    mb_card.innerHTML = `
+                        <img src="${mb_university.img}" alt="${mb_university.name}">
+                        <h3>${mb_university.name}</h3>
+                    `;
+                    mb_universityGrid.appendChild(mb_card);
+                });
+                mb_universityGrid.style.display = "grid"; // Show the grid
+            }
+
+            // Show all universities when "View More" is clicked
+            mb_viewMoreBtn.addEventListener("click", () => {
+                mb_isViewMoreClicked = true; // Disable animations
+                mb_renderAllUniversities(); // Render all universities without animation
+                mb_viewMoreBtn.style.display = "none"; // Hide the button after showing all
+                mb_universitySlider.style.display = "none"; // Hide the first image after "View More" is clicked
+            });
+
+            // Automatic sliding (every 5 seconds)
+            setInterval(() => {
+                if (!mb_isViewMoreClicked) { // Only slide if "View More" hasn't been clicked
+                    mb_currentIndex = (mb_currentIndex + 1) % mb_universities.length;
+                    mb_renderSlider();
+                }
+            }, 6000); // 6 seconds interval for slower transition
+
+            // Initial render for the first image (from the 0th index)
+            mb_currentIndex = 0; // Start with the 0th index
+            mb_renderSlider();
+        </script>
+
+        <style>
+            /* Styling for the slider container */
+            .mb_slider-container {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* Image card styling */
+            .university-card {
+                width: 100%;
+                text-align: center;
+            }
+
+            .university-card img {
+                width: 100%;
+                border-radius: 5px;
+            }
+
+            /* Styling for the View More button */
+            .mb_view-more {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            #mb_viewMoreBtn {
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            /* Grid styling (hidden initially) */
+            .mb_university-grid {
+                display: none;
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .mb_university-grid .university-card {
+                border-radius: 5px;
+            }
+
+            /* Keyframe animation for the "out" effect */
+            @keyframes slide-out {
+                0% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: translateX(-100%);
+                }
+            }
+
+            /* Keyframe animation for the "in" effect */
+            @keyframes slide-in {
+                0% {
+                    opacity: 0;
+                    transform: translateX(100%);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            /* Keyframe animation for the "out" scaling effect */
+            @keyframes scale-out {
+                0% {}
+
+                100% {
+                    opacity: 0;
+                    transition: 0.5s;
+                }
+            }
+
+            /* Keyframe animation for the "in" scaling effect */
+            @keyframes scale-in {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                    transition: 0.5s;
+                }
+            }
+
+            /* Adding the "out" animation */
+            .mb_slider.animate-out {
+                animation: slide-out 0.5s ease-in-out, scale-out 0.5s ease-in-out;
+            }
+
+            /* Adding the "in" animation */
+            .mb_slider.animate-in {
+                animation: slide-in 1s ease-in-out, scale-in 1s ease-in-out;
+            }
+        </style>
+    </div>
+
+
+
+
+    <div class="container" id="location">
+        <div class="ct">
+            <h1 class="section-title">Top Universities</h1>
+            <div class="view-more">
+                <button id="viewMoreBtn">View More</button>
+            </div>
+        </div>
+        <div class="university-grid" id="universityGrid"></div>
+
+    </div>
+
+
+
+    <script>
+        // List of universities
+        const universities = [
+            { img: "img.svg", name: "New York University" },
+            { img: "Image 1-1.svg", name: "Columbia University" },
+            { img: "Image 3.svg", name: "University Of Maryland" },
+            { img: "img.svg", name: "Harvard University" },
+            { img: "Image 1-1.svg", name: "Stanford University" },
+            { img: "Image 3.svg", name: "MIT" },
+            { img: "img.svg", name: "University of California" },
+            { img: "Image 1-1.svg", name: "Oxford University" },
+            { img: "Image 3.svg", name: "Cambridge University" }
+        ];
+
+        const universityGrid = document.getElementById("universityGrid");
+        const viewMoreBtn = document.getElementById("viewMoreBtn");
+
+        // Initially show only the first 3 universities
+        let visibleCount = 3;
+
+        // Function to render universities
+        function renderUniversities() {
+            universityGrid.innerHTML = ""; // Clear the grid
+            universities.slice(0, visibleCount).forEach(university => {
+                const card = document.createElement("div");
+                card.classList.add("university-card");
+
+                card.innerHTML = `
+                
+            <img src="${university.img}" alt="${university.name}">
+            <h3>${university.name}</h3> `;
+
+                universityGrid.appendChild(card);
+            });
+        }
+
+        // Load all universities on "View More" click
+        viewMoreBtn.addEventListener("click", () => {
+            visibleCount = universities.length; // Show all universities
+            renderUniversities();
+            viewMoreBtn.style.display = "none"; // Hide the button after showing all
+        });
+
+        // Initial render
+        renderUniversities();
+
+    </s
