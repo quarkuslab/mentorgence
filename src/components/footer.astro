@@ -1,229 +1,147 @@
+---
+import { Image } from "astro:assets";
 
-<div class="sfooter" id="support" >
-    <div class="ftop">
-        <div class="lshp">
-            <img src="Pattern 5.svg" alt="">
-        </div>
-        <div class="midd">
-            <div class="mt">
-                <h3>Know more about our services</h3>
-            </div>
-            <div class="mb">
-                <button class="btn-filled">Make an Appoinment</button>
-                <button class="btn-unfilled">Contact Us </button>
-            </div>
-        </div>
-        <div class="rshp">
-            <img src="images/Pattern 6.svg" alt="">
-        </div>
+import pattern5Img from "@/assets/Pattern 5.svg";
+import pattern6Img from "@/assets/images/Pattern 6.svg";
+import whatsappImg from "@/assets/icons8-whatsapp-50.png";
+import mailIcon from "@/assets/Vector (1).svg";
+import threadsIcon from "@/assets/Vector-1.svg";
+import instagramIcon from "@/assets/g2.svg";
+import facebookIcon from "@/assets/Vector.svg";
+---
+
+<div class="sfooter" id="support">
+  <div class="ftop">
+    <div class="lshp">
+      <Image src={pattern5Img} alt="pattern 5" />
     </div>
-    <div class="fbottom">
-        <footer class="footer">
-            <div class="footer-container">
-                <!-- Contact Section -->
-                <div class="contact-section">
-                    <div class="contact-item">
-                        <img src="icons8-whatsapp-50.png" alt="WhatsApp" class="icon" />
-                        <span>+971 561625698</span>
-                    </div>
-                    <div class="contact-item">
-                        <img src="Vector (1).svg" alt="Email" class="icon" />
-                        <span>me2gence@gmail.com</span>
-                    </div>
-                </div>
-
-                <!-- Social Icons -->
-                <div class="social-icons">
-                    <a href="#" class="social-link">
-                        <img src="Vector-1.svg" alt="Threads" class="icon" />
-                    </a>
-                    <a href="#" class="social-link">
-                        <img src="g2.svg" alt="Instagram" class="icon" />
-                    </a>
-                    <a href="#" class="social-link">
-                        <img src="Vector.svg" alt="Facebook" class="icon" />
-                    </a>
-                </div>
-
-                <!-- Links Section -->
-                <div class="links-section">
-                    <div class="link-group">
-                        <ul>
-
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#location">Location</a></li>
-                            <li><a href="#careers">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p>© 2022 Blackboard India Pvt. Ltd. All rights reserved.</p>
-            </div>
-        </footer>
+    <div class="midd">
+      <div class="mt">
+        <h3>Know more about our services</h3>
+      </div>
+      <div class="mb">
+        <button class="btn-filled">Make an Appoinment</button>
+        <button class="btn-unfilled">Contact Us</button>
+      </div>
     </div>
+    <div class="rshp">
+      <Image src={pattern6Img} alt="Pattern 6" />
+    </div>
+  </div>
+  <div class="fbottom">
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Contact Section -->
+        <div class="contact-section">
+          <div class="contact-item">
+            <Image src={whatsappImg} alt="Whatsapp" class="icon" />
+            <span>+971 561625698</span>
+          </div>
+          <div class="contact-item">
+            <Image src={mailIcon} alt="Email" class="icon" />
+            <span>me2gence@gmail.com</span>
+          </div>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a href="#" class="social-link">
+            <Image src={threadsIcon} alt="Threads" class="icon" />
+          </a>
+          <a href="#" class="social-link">
+            <Image src={instagramIcon} alt="Instagram" class="icon" />
+          </a>
+          <a href="#" class="social-link">
+            <Image src={facebookIcon} alt="Facebook" class="icon" />
+          </a>
+        </div>
+
+        <!-- Links Section -->
+        <div class="links-section">
+          <div class="link-group">
+            <ul></ul>
+          </div>
+          <div class="link-group">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#location">Location</a></li>
+              <li><a href="#careers">Careers</a></li>
+            </ul>
+          </div>
+          <div class="link-group">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© 2022 Blackboard India Pvt. Ltd. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
 </div>
 
 <div class="mb_sfooter">
-
-    <div class="ft_top">
-        <div class="l">
-
-        </div>
-        <div class="m">
-            <h3>Know more about our services</h3>
-            <div class="ft_mb">
-                <button class="ft_mb_btn-filled">Make an Appoinment</button>
-                <button class="ft_mb_btn-unfilled">Contact Us </button>
-            </div>
-        </div>
-        <div class="r">
-
-        </div>
+  <div class="ft_top">
+    <div class="l"></div>
+    <div class="m">
+      <h3>Know more about our services</h3>
+      <div class="ft_mb">
+        <button class="ft_mb_btn-filled">Make an Appoinment</button>
+        <button class="ft_mb_btn-unfilled">Contact Us </button>
+      </div>
     </div>
-    <style>
-        .ft_top {
-            width: 100%;
-            height: 30%;
-            background-color: #92193b;
+    <div class="r"></div>
+  </div>
 
-
-        }
-
-        .ft_top .l {
-
-            width: 10%;
-            height: 100%;
-            background-image: url("Pattern\ 5.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            float: left;
-        }
-
-        .ft_top .m {
-            width: 80%;
-            height: 100%;
-            background-color: #92193b;
-            float: left;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-family: Poppins;
-            font-size: 25px;
-            font-weight: 700;
-            line-height: 36px;
-            text-align: center;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-            color: white;
-        }
-
-        .ft_top .r {
-            width: 10%;
-            height: 100%;
-            background-color: #92193b;
-            float: left;
-        }
-
-        .ft_mb_btn-filled {
-            height: 50px;
-            background: #ffffff;
-            border: none;
-            border-radius: 5px;
-            color: var(--primary);
-            font-size: 1.2rem;
-            transition: 0.5s;
-            font-size: 12px;
-            font-weight: 700;
-            line-height: 19.2px;
-            letter-spacing: 0.02em;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-            width: max-content;
-            padding: 5px;
-            transition: 1s;
-
-
-        }
-
-        .ft_mb_btn-unfilled {
-            transition: 1s;
-
-            margin: 10px;
-            height: 50px;
-            border-radius: 5px;
-            border: 1px white solid;
-            background: #ffffff00;
-            color: white;
-            font-size: 12px;
-            font-weight: 700;
-            line-height: 19.2px;
-            letter-spacing: 0.02em;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-            width: max-content;
-            padding: 5px;
-
-        }
-
-        .ft_mb {
-            margin-top: 5%;
-        }
-    </style>
-    <div class="mb_fbottom" id="mb_support">
-        <footer class="mb_footer">
-            <div class="mb_footer-container">
-                <!-- Contact Section -->
-                <div class="mb_contact-section">
-                    <div class="mb_contact-item">
-                        <img src="icons8-whatsapp-50.png" alt="WhatsApp" class="mb_icon" />
-                        <h5>+971 561625698</h5>
-                    </div>
-                    <div class="mb_contact-item">
-                        <img src="Vector (1).svg" alt="Email" class="mb_icon" />
-                        <h5>me2gence@gmail.com</h5>
-                    </div>
-                </div>
-                <div class="mb_social-icons">
-                    <a href="https://www.threads.net/@mentorgence/" class="mb_social-link">
-                        <img src="Vector-1.svg" alt="Threads" class="mb_icon" />
-                    </a>
-                    <a href="https://www.instagram.com/mentorgence/" class="mb_social-link">
-                        <img src="g2.svg" alt="Instagram" class="mb_icon" />
-                    </a>
-                    <a href="https://www.facebook.com/mentorgence/" class="mb_social-link">
-                        <img src="Vector.svg" alt="Facebook" class="mb_icon" />
-                    </a>
-                </div>
-                <div class="mb_nav-links">
-                    <a href="#mb_about">About Us</a>
-                    <a href="#mb_support">Support</a>
-                    <a href="#mb_home">Home</a>
-                </div>
-        </footer>
-        <div class="mb_footer-bottom">
-            <p>© 2022 Blackboard India Pvt. Ltd. All rights reserved.</p>
+  <div class="mb_fbottom" id="mb_support">
+    <footer class="mb_footer">
+      <div class="mb_footer-container">
+        <!-- Contact Section -->
+        <div class="mb_contact-section">
+          <div class="mb_contact-item">
+            <Image src={whatsappImg} alt="Whatsapp" class="mb_icon" />
+            <h5>+971 561625698</h5>
+          </div>
+          <div class="mb_contact-item">
+            <Image src={mailIcon} alt="Email" class="mb_icon" />
+            <h5>me2gence@gmail.com</h5>
+          </div>
         </div>
-    </div>
+        <div class="mb_social-icons">
+          <a
+            href="https://www.threads.net/@mentorgence/"
+            class="mb_social-link"
+          >
+            <Image src={threadsIcon} alt="Threads" class="mb_icon" />
+          </a>
+          <a
+            href="https://www.instagram.com/mentorgence/"
+            class="mb_social-link"
+          >
+            <Image src={instagramIcon} alt="Instagram" class="mb_icon" />
+          </a>
+          <a
+            href="https://www.facebook.com/mentorgence/"
+            class="mb_social-link"
+          >
+            <Image src={facebookIcon} alt="Facebook" class="mb_icon" />
+          </a>
+        </div>
+        <div class="mb_nav-links">
+          <a href="#mb_about">About Us</a>
+          <a href="#mb_support">Support</a>
+          <a href="#mb_home">Home</a>
+        </div>
+      </div>
+      <div class="mb_footer-bottom">
+        <p>© 2022 Blackboard India Pvt. Ltd. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
 </div>
-
-</body>
-
-</html>
