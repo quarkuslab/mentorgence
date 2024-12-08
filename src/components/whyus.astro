@@ -36,44 +36,91 @@ import pattern2Img from "@/assets/Pattern 4.svg";
     <div class="go"><img src="XMLID 1522.svg" alt="" /></div>
   </div>
 </div>
-
-<div class="service" id="careers">
-  <div class="service_container">
-    <div class="title">
-      <h3>Why choose <span>Mentorgence?</span></h3>
-
-      <Image src={patternImg} alt="pattern 3" />
+<div class="w-full h-screen flex flex-col items-center justify-center" id="careers">
+  <!-- Service Container -->
+  <div class="w-[95%] flex mt-[2%]">
+    <!-- Title Section -->
+    <div class="w-[20%] flex">
+      <h3 class="text-[40px] font-medium leading-[48px] ml-[50%]">
+        Why choose <span class="text-primary">Mentorgence?</span>
+      </h3>
+      <Image src={patternImg} alt="pattern 3" class="w-full h-full" />
     </div>
-    <div class="service_list">
-      <div class="sbox off"></div>
-      <div class="sbox onn" style="background: #F5F9FE;">
-        <div class="circle" style="background: #B5E7E8;"></div>
-        <h3>Ethical Guidance</h3>
-        <div class="go"><img src="XMLID 1522.svg" alt="" /></div>
+
+    <!-- Service List -->
+    <div class="w-[80%] grid gap-[10px] grid-cols-3 grid-rows-2">
+      <!-- Box 1 -->
+      <div class="bg-transparent"></div>
+
+      <!-- Box 2 -->
+      <div
+        class="flex flex-col bg-[#F5F9FE] p-[10%] transition duration-1000 hover:shadow-lg hover:-translate-x-[10px] hover:-translate-y-[10px] hover:rounded-md"
+      >
+        <div class="w-[70px] h-[70px] mb-[10%] bg-[#B5E7E8] rounded-full"></div>
+        <h3 class="text-[24px] font-medium leading-[28.8px] text-black">Ethical Guidance</h3>
+        <div
+          class="w-[40px] h-[40px] flex items-center justify-center mt-[10%] rounded-full transition-transform duration-500 hover:bg-[#408dff] hover:scale-125"
+        >
+          <img src="XMLID 1522.svg" alt="" />
+        </div>
       </div>
-      <div class="sbox onn" style="    background: #ffffff;">
-        <div class="circle" style="background: #FFE8B3;"></div>
-        <h3>Focus on Student Success</h3>
-        <div class="go"><img src="XMLID 1522.svg" alt="" /></div>
+
+      <!-- Box 3 -->
+      <div
+        class="flex flex-col bg-white p-[10%] transition duration-1000 hover:shadow-lg hover:-translate-x-[10px] hover:-translate-y-[10px] hover:rounded-md"
+      >
+        <div class="w-[70px] h-[70px] mb-[10%] bg-[#FFE8B3] rounded-full"></div>
+        <h3 class="text-[24px] font-medium leading-[28.8px] text-black">Focus on Student Success</h3>
+        <div
+          class="w-[40px] h-[40px] flex items-center justify-center mt-[10%] rounded-full transition-transform duration-500 hover:bg-[#408dff] hover:scale-125"
+        >
+          <img src="XMLID 1522.svg" alt="" />
+        </div>
       </div>
-      <div class="sbox onn" style="    background: #F5F9FE;">
-        <div class="circle" style="background: #DDD5FE;"></div>
-        <h3>Authorized University Agent</h3>
-        <div class="go"><img src="XMLID 1522.svg" alt="" /></div>
+
+      <!-- Box 4 -->
+      <div
+        class="flex flex-col bg-[#F5F9FE] p-[10%] transition duration-1000 hover:shadow-lg hover:-translate-x-[10px] hover:-translate-y-[10px] hover:rounded-md"
+      >
+        <div class="w-[70px] h-[70px] mb-[10%] bg-[#DDD5FE] rounded-full"></div>
+        <h3 class="text-[24px] font-medium leading-[28.8px] text-black">Authorized University Agent</h3>
+        <div
+          class="w-[40px] h-[40px] flex items-center justify-center mt-[10%] rounded-full transition-transform duration-500 hover:bg-[#408dff] hover:scale-125"
+        >
+          <img src="XMLID 1522.svg" alt="" />
+        </div>
       </div>
-      <div class="sbox onn" style="    background: #ffffff;">
-        <div class="circle" style="background: #FFE8B3;"></div>
-        <h3>Transparent Services</h3>
-        <div class="go"><img src="XMLID 1522.svg" alt="" /></div>
+
+      <!-- Box 5 -->
+      <div
+        class="flex flex-col bg-white p-[10%] transition duration-1000 hover:shadow-lg hover:-translate-x-[10px] hover:-translate-y-[10px] hover:rounded-md"
+      >
+        <div class="w-[70px] h-[70px] mb-[10%] bg-[#FFE8B3] rounded-full"></div>
+        <h3 class="text-[24px] font-medium leading-[28.8px] text-black">Transparent Services</h3>
+        <div
+          class="w-[40px] h-[40px] flex items-center justify-center mt-[10%] rounded-full transition-transform duration-500 hover:bg-[#408dff] hover:scale-125"
+        >
+          <img src="XMLID 1522.svg" alt="" />
+        </div>
       </div>
-      <div class="sbox onn" style="    background: #F5F9FE;">
-        <div class="circle" style="background: #B5E7E8;"></div>
-        <h3>Comprehensive Support</h3>
-        <div class="go"><img src="XMLID 1522.svg" alt="" /></div>
+
+      <!-- Box 6 -->
+      <div
+        class="flex flex-col bg-[#F5F9FE] p-[10%] transition duration-1000 hover:shadow-lg hover:-translate-x-[10px] hover:-translate-y-[10px] hover:rounded-md"
+      >
+        <div class="w-[70px] h-[70px] mb-[10%] bg-[#B5E7E8] rounded-full"></div>
+        <h3 class="text-[24px] font-medium leading-[28.8px] text-black">Comprehensive Support</h3>
+        <div
+          class="w-[40px] h-[40px] flex items-center justify-center mt-[10%] rounded-full transition-transform duration-500 hover:bg-[#408dff] hover:scale-125"
+        >
+          <img src="XMLID 1522.svg" alt="" />
+        </div>
       </div>
     </div>
   </div>
-  <div class="p4">
-    <Image src={pattern2Img} alt="Pattern 2" />
+
+  <!-- Bottom Pattern -->
+  <div class="w-full h-[30%]">
+    <Image src={pattern2Img} alt="Pattern 2" class="w-[20%] h-full float-right" />
   </div>
 </div>

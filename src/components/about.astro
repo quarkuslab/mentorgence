@@ -1,12 +1,19 @@
-<div class="about_us" id="about">
-  <div class="shape1">
-    <img src="sidel.svg" alt="" />
-  </div>
-  <div class="aboutus_text">
+---
+import { Image } from "astro:assets";
+import sider from "@/assets/sider.svg";
+import sidel from "@/assets/sidel.svg";
+
+---
+<div class="about_us w-full h-[50vh] flex justify-between" id="about">
+  <div class="shape1 w-[10%] h-full flex animate-up delay-[2s]">
+    <Image src={sidel} alt="Pattern 6" / class="w-full">
+    </div>
+  <div class="aboutus_text text-[#0F2F64] text-[40px] font-medium leading-[48px] text-center flex items-center justify-center h-full animate-up delay-[2s]">
     <h>We Guarantee the <span>Best Service</span> </h>
   </div>
-  <div class="shape2">
-    <img src="sider.svg" alt="" />
+  <div class="shape2 w-[10%] h-full flex animate-up delay-[2s]">
+    <Image src={sider} alt="Pattern 6" / class="w-full">
+    
   </div>
 </div>
 
@@ -21,12 +28,12 @@
 
 <div class="mb_box" id="mb_about">
   <div class="lside">
-    <img src="sidel.svg" alt="" />
+    <img class="w-full" src="sidel.svg" alt="" />
   </div>
   <div class="midd">
     <h>We Guarantee the <span>Best Service </span></h>
   </div>
   <div class="rside">
-    <img src="sider.svg" alt="" />
+    <img class="w-full"   src="sider.svg" alt="" />
   </div>
 </div>

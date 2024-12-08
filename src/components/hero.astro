@@ -6,11 +6,11 @@ import logo2 from "@/assets/ulogo2.svg";
 import leftImg from "@/assets/Patterns.svg";
 import rightImg from "@/assets/Image 1.svg";
 ---
-
-<div class="herosection">
-  <div class="left_container">
-    <div class="ltop">
-      <h1>Your Trusted Guide to</h1>
+ 
+<div class="herosection w-full h-[100vh] flex">
+  <div class="left_container w-[60%] h-full flex items-center flex-col justify-center">
+    <div class="ltop w-[80%]">
+      <h1 class="text-[80px] font-bold leading-[76.8px] text-[#000000] w-[80%]" >Your Trusted Guide to</h1>
       <h2>Global Education</h2>
       <p>
         At MentorGence, we are dedicated to providing students with trusted
@@ -27,15 +27,21 @@ import rightImg from "@/assets/Image 1.svg";
       </div>
     </div>
   </div>
-  <div class="right_container">
-    <div class="lftshape">
-      <Image src={leftImg} alt="" />
+  <div class="flex items-center w-2/5 h-full">
+    <!-- Left Shape -->
+    <div class="flex items-center w-[30%] h-full">
+      <Image src={leftImg} alt="Shape" class="w-full h-full ml-10 " />
     </div>
-    <div class="rgtimg">
-      <Image src={rightImg} alt="" />
+  
+    <!-- Right Image -->
+    <div class="flex w-7/10 ">
+      <Image src={rightImg} alt="Image" class=" w-full h-full mt-[-5%]" />
     </div>
   </div>
-</div>
+  
+
+
+
 <div class="mb_herosection">
   <div class="mb_left">
     <Image src={leftImg} alt="" />
