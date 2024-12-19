@@ -3,13 +3,16 @@ import { Image } from "astro:assets";
 
 import patternImg from "@/assets/Pattern 3.svg";
 import pattern2Img from "@/assets/Pattern 4.svg";
----
+import WhyusCard from "@/components/WhyusCard.astro"
 
+---
+<!-- 
 <div class="mb_whyus">
   <h>Why choose <span>Mentorgence?</span></h>
 </div>
 
 <div class="mb_service_list">
+  <
   <div class="sbox on" style="background: #F5F9FE;">
     <div class="circle" style="background: #B5E7E8;"></div>
     <h3>Ethical Guidance</h3>
@@ -35,94 +38,53 @@ import pattern2Img from "@/assets/Pattern 4.svg";
     <h3>Comprehensive Support</h3>
     <div class="go"><img src="XMLID 1522.svg" alt="" /></div>
   </div>
-</div>
+</div> -->
 
-
+<!-- 
 <div class="w-full h-screen flex flex-col items-center justify-center" id="careers">
-  <!-- Service Container -->
-  <div class="w-[95%] flex mt-[2%]">
-    <!-- Title Section -->
+  <div class="container mx-auto px-5 flex">
     <div class="w-[20%] flex">
       <h3 class="text-[40px] font-medium leading-[48px] ml-[50%]">
         Why choose <span class="text-primary">Mentorgence?</span>
       </h3>
-      <Image src={patternImg} alt="pattern 3" class="w-full h-full" />
+      <Image class="hidden md:block" src={patternImg} alt="pattern 3" class="w-full h-full" />
     </div>
 
-    <!-- Service List -->
-    <div class="w-[80%] grid gap-[10px] grid-cols-3 grid-rows-2">
-      <!-- Box 1 -->
+    <div class="w-[80%] bg-red-500 grid gap-[10px] grid-cols-1 md:grid-cols-3 grid-rows-2">
       <div class="bg-transparent"></div>
 
-      <!-- Box 2 -->
-      <div
-        class="flex flex-col bg-[#F5F9FE] p-[10%] transition duration-1000 hover:shadow-lg hover:-translate-x-[10px] hover:-translate-y-[10px] hover:rounded-md"
-      >
-        <div class="w-[70px] h-[70px] mb-[10%] bg-[#B5E7E8] rounded-full"></div>
-        <h3 class="text-[24px] font-medium leading-[28.8px] text-black">Ethical Guidance</h3>
-        <div
-          class="w-[40px] h-[40px] flex items-center justify-center mt-[10%] rounded-full transition-transform duration-500 hover:bg-[#408dff] hover:scale-125"
-        >
-          <img src="XMLID 1522.svg" alt="" />
-        </div>
-      </div>
+       <WhyusCard title="Ethical Guidance" />
 
-      <!-- Box 3 -->
-      <div
-        class="flex flex-col bg-white p-[10%] transition duration-1000 hover:shadow-lg hover:-translate-x-[10px] hover:-translate-y-[10px] hover:rounded-md"
-      >
-        <div class="w-[70px] h-[70px] mb-[10%] bg-[#FFE8B3] rounded-full"></div>
-        <h3 class="text-[24px] font-medium leading-[28.8px] text-black">Focus on Student Success</h3>
-        <div
-          class="w-[40px] h-[40px] flex items-center justify-center mt-[10%] rounded-full transition-transform duration-500 hover:bg-[#408dff] hover:scale-125"
-        >
-          <img src="XMLID 1522.svg" alt="" />
-        </div>
-      </div>
+      <WhyusCard title="Focus on Student Success" alternate />
 
-      <!-- Box 4 -->
-      <div
-        class="flex flex-col bg-[#F5F9FE] p-[10%] transition duration-1000 hover:shadow-lg hover:-translate-x-[10px] hover:-translate-y-[10px] hover:rounded-md"
-      >
-        <div class="w-[70px] h-[70px] mb-[10%] bg-[#DDD5FE] rounded-full"></div>
-        <h3 class="text-[24px] font-medium leading-[28.8px] text-black">Authorized University Agent</h3>
-        <div
-          class="w-[40px] h-[40px] flex items-center justify-center mt-[10%] rounded-full transition-transform duration-500 hover:bg-[#408dff] hover:scale-125"
-        >
-          <img src="XMLID 1522.svg" alt="" />
-        </div>
-      </div>
+      <WhyusCard title="Authorized University Agent" />
 
-      <!-- Box 5 -->
-      <div
-        class="flex flex-col bg-white p-[10%] transition duration-1000 hover:shadow-lg hover:-translate-x-[10px] hover:-translate-y-[10px] hover:rounded-md"
-      >
-        <div class="w-[70px] h-[70px] mb-[10%] bg-[#FFE8B3] rounded-full"></div>
-        <h3 class="text-[24px] font-medium leading-[28.8px] text-black">Transparent Services</h3>
-        <div
-          class="w-[40px] h-[40px] flex items-center justify-center mt-[10%] rounded-full transition-transform duration-500 hover:bg-[#408dff] hover:scale-125"
-        >
-          <img src="XMLID 1522.svg" alt="" />
-        </div>
-      </div>
+      <WhyusCard title="Transparent Services" alternate />
 
-      <!-- Box 6 -->
-      <div
-        class="flex flex-col bg-[#F5F9FE] p-[10%] transition duration-1000 hover:shadow-lg hover:-translate-x-[10px] hover:-translate-y-[10px] hover:rounded-md"
-      >
-        <div class="w-[70px] h-[70px] mb-[10%] bg-[#B5E7E8] rounded-full"></div>
-        <h3 class="text-[24px] font-medium leading-[28.8px] text-black">Comprehensive Support</h3>
-        <div
-          class="w-[40px] h-[40px] flex items-center justify-center mt-[10%] rounded-full transition-transform duration-500 hover:bg-[#408dff] hover:scale-125"
-        >
-          <img src="XMLID 1522.svg" alt="" />
-        </div>
-      </div>
+      <WhyusCard title="Comprehensive Support" />
     </div>
   </div>
 
-  <!-- Bottom Pattern -->
   <div class="w-full h-[30%]">
     <Image src={pattern2Img} alt="Pattern 2" class="w-[20%] h-full float-right" />
+  </div>
+</div> -->
+
+
+<div class="container mx-auto px-5">
+  <div class="grid grid-cols-1 md:grid-cols-4">
+    <div class="col-span-1 md:col-span-2 flex flex-col justify-center py-10">
+      <h3 class="text-6xl font-medium">
+        Why choose <br /> <span class="text-primary">Mentorgence?</span>
+      </h3>
+    </div>
+    <WhyusCard title="Ethical Guidance" alternate />
+    <WhyusCard title="Focus on Student Success" />
+    <div class="hidden md:block overflow-hidden relative">
+      <Image src={patternImg} alt="Pattern 2" class="w-80 absolute -right-28" />
+    </div>
+    <WhyusCard title="Authorized University Agent"alternate />
+    <WhyusCard title="Transparent Services" />
+    <WhyusCard title="Comprehensive Support" alternate />
   </div>
 </div>
