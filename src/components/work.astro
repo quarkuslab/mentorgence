@@ -1,3 +1,12 @@
+---
+import { Image } from "astro:assets";
+
+import patternImg from "@/assets/Pattern 3.svg";
+import pattern2Img from "@/assets/Pattern 4.svg";
+import ValuesCard from "@/components/ValuesCard.astro";
+---
+
+<!-----
 
 <div class="howwework">
     <div class="topl">
@@ -25,16 +34,16 @@
     </div>
 </div>
 <div class="whysection w-full h-[75vh] flex flex-col bg-[#F5F9FE] bg-no-repeat bg-contain" style="background-image: url('images/Pattern.svg');">
-    <!-- Top Section -->
+    
     <div class="top w-full h-[20%] flex items-center justify-center">
       <h2 class="text-[40px] font-medium text-black leading-[48px]">
         Our <span class="text-primary">Values</span> and <span class="text-primary">Mission</span>
       </h2>
     </div>
   
-    <!-- Middle Section -->
+    
     <div class="middile w-full h-[60%] flex justify-evenly items-center">
-      <!-- Box 1 -->
+      
       <div
         id="one"
         class="ybox w-[30%] h-[80%] bg-white flex flex-col p-[2%] rounded-[10px] transition-transform duration-500 hover:translate-x-[-10px] hover:translate-y-[-20px] hover:shadow-[10px_10px_20px_1px_#FFE8B36E]"
@@ -47,7 +56,7 @@
         </p>
       </div>
   
-      <!-- Box 2 -->
+      
       <div
         id="two"
         class="ybox w-[30%] h-[80%] bg-white flex flex-col p-[2%] rounded-[10px] transition-transform duration-500 hover:translate-x-[-10px] hover:translate-y-[-20px] hover:shadow-[10px_10px_20px_1px_#DDD5FE8F]"
@@ -60,7 +69,7 @@
         </p>
       </div>
   
-      <!-- Box 3 -->
+      
       <div
         id="three"
         class="ybox w-[30%] h-[80%] bg-white flex flex-col p-[2%] rounded-[10px] transition-transform duration-500 hover:translate-x-[-10px] hover:translate-y-[-20px] hover:shadow-[10px_10px_20px_1px_#B5E7E880]"
@@ -74,7 +83,37 @@
       </div>
     </div>
   
-    <!-- Bottom Section -->
+    
     <div class="bottom w-full h-[20%]"></div>
   </div>
-  
+  --- -->
+<div
+  class="w-full my-20 px-4 bg-[#F5F9FE]"
+  style="background-image: url('/src/assets/Pattern.svg') ; background-repeat: no-repeat;"
+>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Title Section -->
+    <div class="col-span-1 md:col-span-3 text-center py-10">
+      <h3 class=" hidden md:block text-4xl md:text-6xl font-medium mx-[30%] ">
+        Our <span class="text-primary"> Values </span> and <span class="text-primary"> Mission </span>
+      </h3>
+      <h3 class="md:hidden sm:flex text-4xl md:text-6xl font-medium text-center mt-20">How We<span class="text-primary"> Works</span> </h3>
+    </div>
+    <!-- Values Cards -->
+    <ValuesCard
+      title="Values"
+      para="Integrity, commitment, and student success are our core values."
+      url="src/assets/images/1.svg"
+    />
+    <ValuesCard
+      title="Mission"
+      para="We guide students to make informed choices for higher education."
+      url="src/assets/images/2.svg"
+    />
+    <ValuesCard
+      title="Focus"
+      para="Helping students secure placements in top global universities."
+      url="src/assets/images/3.svg"
+    />
+  </div>
+</div>

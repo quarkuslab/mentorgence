@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
       <Image src={logoImg} alt="logo" />
     </div>
     <div class="hidden md:flex items-center justify-between gap-10">
-      <div class="flex items-center justif-center gap-3">
+      <div class="flex items-center justif-center gap-5 font-poppins text-[16px] font-medium leading-[25.6px] text-left decoration-skip-ink">
         <a href="#" class="link">Home</a>
         <a href="#" class="link">About</a>
         <a href="#" class="link">Support</a>
@@ -19,9 +19,14 @@ import { Image } from "astro:assets";
           Register Now
         </button>
       </div>
+
     </div>
+    
     <div class="md:hidden">
-      <button>Menu</button>
+      <button class="bg-primary rounded-md px-5 py-3 text-white font-medium">
+        Register Now
+      </button>
+      <button class="mx-2">Menu</button>
     </div>
   </div>
 </div>

@@ -7,51 +7,39 @@ import leftImg from "@/assets/Patterns.svg";
 import rightImg from "@/assets/Image 1.svg";
 ---
 
-<!-- Desktop Hero Section -->
-<div class="hidden lg:flex herosection w-full h-screen">
-  <div class="left_container w-3/5 h-full flex flex-col items-center justify-center">
-    <div class="ltop w-4/5">
-      <h1 class="text-6xl font-bold leading-[76.8px] text-black w-4/5">
-        Your Trusted Guide to
-      </h1>
-      <h2 class="text-4xl font-semibold mt-4">Global Education</h2>
-      <p class="text-lg mt-4 text-gray-700">
-        At MentorGence, we are dedicated to providing students with trusted
-        guidance on their journey to pursuing higher education abroad. We work
-        closely with students, parents, and partner universities to create clear
-        pathways to global learning opportunities.
-      </p>
-    </div>
-    <div class="lbtom mt-8">
-      <h3 class="text-lg font-medium">Partnered with</h3>
-      <div class="logos flex space-x-4 mt-4">
-        <Image src={logo1} alt="Harvard University" class="h-12" />
-        <Image src={logo2} alt="University of Michigan" class="h-12" />
+<div class="w-full h-[60vh] flex mt-3 ">
+  <div class="hidden  w-[50%] md:flex flex-col ">
+    <div class=" w-full h-[70%]  flex mt-30  items-center ">
+      <div class="w-4/5 px-20  flex-col items-center justify-center">
+        <h1 class="font-poppins text-8xl font-extrabold leading-[76.8px] text-left underline from-font decoration-transparent ">
+          Your Trusted Guide to
+        </h1>
+        <h2 class="text-4xl text-primary font-semibold mt-4 font-poppins text-6xl font-extrabold leading-[61.44px] text-left underline from-font decoration-transparent ">Global Education</h2>
+        <p class="text-[20px] mt-4 text-gray-700 ">
+          At MentorGence, we are dedicated to providing students with trusted
+          guidance on their journey to pursuing higher education abroad. We work
+          closely with students, parents, and partner universities to create clear
+          pathways to global learning opportunities.
+        </p>
       </div>
     </div>
-  </div>
 
-  <div class="right_container w-2/5 h-full flex items-center">
-    <!-- Left Shape -->
-    <div class="w-1/3 h-full flex items-center ml-10">
-      <Image src={leftImg} alt="Shape" class="w-full h-full" />
-    </div>
+    <div class=" w-full h-[30%] flex items-center px-20 gap-3 ">
 
-    <!-- Right Image -->
-    <div class="w-2/3 h-full">
-      <Image src={rightImg} alt="Image" class="w-full h-full -mt-5" />
+      <h3 class="text-lg font-medium">Partnered with</h3>
+      <Image src={logo1} alt="Harvard University" class="h-13" />
+      <Image src={logo2} alt="University of Michigan" class="h-13" />
     </div>
   </div>
-</div>
 
-
-
-
-<div class=" flex lg:hidden  w-full items-center mt-5">
-  <div class="w-[40%] h-full ">
-    <Image src={leftImg} alt="Pattern" class="w-[200%] h-full" />
+  <div class="md:w-[15%]   flex items-center  w-[30%] h-full">
+    <Image src={leftImg} alt="Shape" class=" w-full h-full   float-right  md:mx-96  mx-20  " />
   </div>
-  <div class=" w-[95%] h-[95%]">
-    <Image src={rightImg} alt="Image" class="w-full h-full" />
+
+  <div class="flex md:w-[35%]  w-[70%] ">
+    <div class="">
+      <Image src={rightImg} alt="Image" class="w-full h-full md:mx-32" />
+    </div>
+
   </div>
 </div>

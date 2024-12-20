@@ -1,4 +1,4 @@
----
+ ---
 import { Image } from "astro:assets";
 
 import pattern5Img from "@/assets/Pattern 5.svg";
@@ -10,28 +10,78 @@ import instagramIcon from "@/assets/g2.svg";
 import facebookIcon from "@/assets/Vector.svg";
 ---
 
-<div class="sfooter w-full h-[80vh]" id="support">
+<div class="  w-full h-[80vh] " id="support">
   <div class="ftop w-full h-1/2 flex items-center bg-primary">
     <div class="lshp h-full flex items-center">
       <Image src={pattern5Img} alt="pattern 5" / class="h-[90%] w-full">
     </div>
-    <div class="midd w-full h-full flex flex-col items-center justify-center text-[2.4rem] text-white">
+    <div class=" w-full h-full flex flex-col items-center justify-center text-[2.4rem] text-white">
       <div class="mt">
-        <h3>Know more about our services</h3>
+        <h3 class="text-center font-work-sans text-4xl font-bold leading-[48px] text-center underline from-font decoration-transparent">Know more about our services</h3>
       </div>
       <div class="mb mt-[2%] gap-[10px] w-1/2 flex items-center justify-center">
-        <button class="btn-filled px-2.5 py-[10px] w-max h-[50px] bg-white border-none rounded-md text-primary text-[14px] font-bold leading-[25.6px] tracking-[0.02em]  decoration-skip-ink-none transition duration-500 hover:border hover:border-white hover:bg-transparent hover:text-white transition duration-500">Make an Appoinment</button>
-        <button class="btn-unfilled px-2.5 py-[10px] w-max h-[50px] rounded-md border border-white bg-transparent text-white text-[14px]  font-bold leading-[25.6px] tracking-[0.02em]  decoration-skip-ink-none hover:bg-white hover:border-none hover:rounded-md hover:text-primary">Contact Us</button>
-      </div>
+        <button class="btn-filled px-6 py-2 h-[50px] bg-white border-none rounded-lg text-primary text-[16px] font-bold whitespace-nowrap hover:border hover:border-white hover:bg-transparent hover:text-white transition duration-300">
+          Make an Appointment
+        </button>
+        <button class="btn-unfilled px-6 py-2 h-[50px] rounded-lg border border-white bg-transparent text-white text-[16px] font-bold whitespace-nowrap hover:bg-white hover:border-none hover:rounded-lg hover:text-primary transition duration-300">
+          Contact Us
+        </button>
+        
+        </div>
     </div>
     <div class="rshp h-full flex items-center">
-      <Image src={pattern6Img} alt="Pattern 6" / class="w-full h-[50%]">
+      <Image src={pattern6Img} alt="Pattern 6" / class=" hidden md:flex w-full h-[50%]">
     </div>
   </div>
-  <div class="fbottom h-[60%]">
+
+
+  <div class="sm:flex md:hidden  w-full flex-col h-[30vh] ">
+    <div class=" w-full h-[50%] flex flex-col  items-center justify-center   ">
+      <div class="contact-section  flex flex-col gap-[15px]">
+        <div class="contact-item flex items-center">
+          <Image src={whatsappImg} alt="Whatsapp" class="icon w-[30px] h-[30px] mr-[10px]" />
+          <span  class="text-[#0F2F64] text-[16px] font-normal leading-[25.6px] text-left  decoration-skip-ink-none">+971 561625698</span>
+        </div>
+        <div class="contact-item flex items-center">
+          <Image src={mailIcon} alt="Email" class="icon w-[30px] h-[30px] mr-[10px]" />
+          <span  class="text-[#0F2F64] text-[16px] font-normal leading-[25.6px] text-left  decoration-skip-ink-none">me2gence@gmail.com</span>
+        </div>
+      </div>
+  
+    </div>
+    <div class=" w-full h-[50%] flex ">
+      <div class=" w-1/2 h-full items-center flex  ">
+        <div class="social-icons flex-1 flex justify-center gap-[30px]">
+          <a href="#" class="social-link w-[40px] h-[40px]">
+            <Image src={threadsIcon} alt="Threads" class="icon" />
+          </a>
+          <a href="#" class="social-link">
+            <Image src={instagramIcon} alt="Instagram" class="icon" />
+          </a>
+          <a href="#" class="social-link">
+            <Image src={facebookIcon} alt="Facebook" class="icon" />
+          </a>
+        </div>
+      </div>
+      <div class="w-1/2 h-full items-center flex justify-center">
+        <ul class="list-none p-0 m-0">
+          <li class="mb-[12px]"><a class="text-[#536288] text-[16px] font-normal leading-[25.6px] text-left  decoration-skip-ink-none hover:underline hover:text-[#0F2F64]" href="#about">About Us</a></li>
+          <li class="mb-[12px]"><a class="text-[#536288] text-[16px] font-normal leading-[25.6px] text-left  decoration-skip-ink-none hover:underline hover:text-[#0F2F64]" href="#location">Location</a></li>
+          <li class="mb-[12px]"><a class="text-[#536288] text-[16px] font-normal leading-[25.6px] text-left  decoration-skip-ink-none hover:underline hover:text-[#0F2F64]" href="#careers">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+        
+    <div class="text-center text-[14px] text-[#666] mt-[20px]">
+      <p>© 2022 Blackboard India Pvt. Ltd. All rights reserved.</p>
+    </div>
+
+   </div>
+
+  <div class="h-[60%] md:block  hidden ">
     <footer class="footer bg-[#F5F9FE] p-[40px_60px] text-[#333] h-full flex flex-col justify-end">
       <div class="footer-container flex justify-between items-start flex-wrap gap-[20px] border-b border-[#ddd] pb-[20px]">
-        <!-- Contact Section -->
+        
         <div class="contact-section flex-1 flex flex-col gap-[15px]">
           <div class="contact-item flex items-center">
             <Image src={whatsappImg} alt="Whatsapp" class="icon w-[30px] h-[30px] mr-[10px]" />
@@ -43,7 +93,7 @@ import facebookIcon from "@/assets/Vector.svg";
           </div>
         </div>
 
-        <!-- Social Icons -->
+        
         <div class="social-icons flex-1 flex justify-center gap-[30px]">
           <a href="#" class="social-link w-[40px] h-[40px]">
             <Image src={threadsIcon} alt="Threads" class="icon" />
@@ -56,20 +106,20 @@ import facebookIcon from "@/assets/Vector.svg";
           </a>
         </div>
 
-        <!-- Links Section -->
+        
         <div class="links-section flex-2 flex justify-between gap-[50px]">
-          <div class="link-group flex-1 mr-0">
+          <div class="hidden link-group flex-1 mr-0">
             <ul></ul>
           </div>
-          <div class="link-group flex-1 mr-0">
-            <h4 class="text-[16px] font-bold leading-[25.6px] text-left mb-[15px]">Company</h4>
+          <div class=" link-group flex-1 mr-0">
+            <h4 class="  text-[16px] font-bold leading-[25.6px] text-left mb-[15px]">Company</h4>
             <ul class="list-none p-0 m-0">
               <li class="mb-[12px]"><a class="text-[#536288] text-[16px] font-normal leading-[25.6px] text-left  decoration-skip-ink-none hover:underline hover:text-[#0F2F64]" href="#about">About Us</a></li>
               <li class="mb-[12px]"><a class="text-[#536288] text-[16px] font-normal leading-[25.6px] text-left  decoration-skip-ink-none hover:underline hover:text-[#0F2F64]" href="#location">Location</a></li>
               <li class="mb-[12px]"><a class="text-[#536288] text-[16px] font-normal leading-[25.6px] text-left  decoration-skip-ink-none hover:underline hover:text-[#0F2F64]" href="#careers">Careers</a></li>
             </ul>
           </div>
-          <div class="link-group flex-1 mr-0">
+          <div class=" flex-col link-group flex-1 mr-0 ">
             <h4 class="text-[16px] font-bold leading-[25.6px] text-left mb-[15px]">Resources</h4>
             <ul class="list-none p-0 m-0">
               <li class="mb-[12px]"><a class="text-[#536288] text-[16px] font-normal leading-[25.6px] text-left  decoration-skip-ink-none hover:underline hover:text-[#0F2F64]" href="#">Blog</a></li>
@@ -78,70 +128,18 @@ import facebookIcon from "@/assets/Vector.svg";
         </div>
       </div>
 
-      <!-- Footer Bottom -->
       <div class="text-center text-[14px] text-[#666] mt-[20px]">
         <p>© 2022 Blackboard India Pvt. Ltd. All rights reserved.</p>
       </div>
+
     </footer>
   </div>
 </div>
 
-<div class="mb_sfooter">
-  <div class="ft_top">
-    <div class="l"></div>
-    <div class="m">
-      <h3>Know more about our services</h3>
-      <div class="ft_mb">
-        <button class="ft_mb_btn-filled">Make an Appoinment</button>
-        <button class="ft_mb_btn-unfilled">Contact Us </button>
-      </div>
-    </div>
-    <div class="r"></div>
-  </div>
 
-  <div class="mb_fbottom" id="mb_support">
-    <footer class="mb_footer">
-      <div class="mb_footer-container">
-        <!-- Contact Section -->
-        <div class="mb_contact-section">
-          <div class="mb_contact-item">
-            <Image src={whatsappImg} alt="Whatsapp" class="mb_icon" />
-            <h5>+971 561625698</h5>
-          </div>
-          <div class="mb_contact-item">
-            <Image src={mailIcon} alt="Email" class="mb_icon" />
-            <h5>me2gence@gmail.com</h5>
-          </div>
-        </div>
-        <div class="mb_social-icons">
-          <a
-            href="https://www.threads.net/@mentorgence/"
-            class="mb_social-link"
-          >
-            <Image src={threadsIcon} alt="Threads" class="mb_icon" />
-          </a>
-          <a
-            href="https://www.instagram.com/mentorgence/"
-            class="mb_social-link"
-          >
-            <Image src={instagramIcon} alt="Instagram" class="mb_icon" />
-          </a>
-          <a
-            href="https://www.facebook.com/mentorgence/"
-            class="mb_social-link"
-          >
-            <Image src={facebookIcon} alt="Facebook" class="mb_icon" />
-          </a>
-        </div>
-        <div class="mb_nav-links">
-          <a href="#mb_about">About Us</a>
-          <a href="#mb_support">Support</a>
-          <a href="#mb_home">Home</a>
-        </div>
-      </div>
-      <div class="mb_footer-bottom">
-        <p>© 2022 Blackboard India Pvt. Ltd. All rights reserved.</p>
-      </div>
-    </footer>
-  </div>
-</div>
+
+
+
+
+
+
