@@ -1,0 +1,80 @@
+---
+import threadsIcon from "../assets/threads-icon.png";
+import whatsappIcon from "../assets/whatsapp-icon.png";
+import instagramIcon from "../assets/insta-icon.png";
+import facebookIcon from "../assets/fb-icon.png";
+import companyLogo from "../assets/logo.svg";
+import backgroundImg from "../assets/bg.jpg";
+
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout>
+  <div class="container">
+    <div class="content">
+      <Image src={companyLogo} alt="Mentorgence" class="logo" />
+      <h1>We have something for you.</h1>
+      <p>We are going to launch our website soon.</p>
+      <div class="social-icons">
+        <a href="https://www.threads.net/@mentorgence/" target="_blank">
+          <Image src={threadsIcon} alt="Threads" />
+        </a>
+        <a href="https://wa.me/message/SPYCZMLRHTJZD1" target="_blank">
+          <Image src={whatsappIcon} alt="Whatsapp" />
+        </a>
+        <a href="https://www.instagram.com/mentorgence/" target="_blank">
+          <Image src={instagramIcon} alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com/mentorgence/" target="_blank">
+          <Image src={facebookIcon} alt="Facebook" />
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style define:vars={{ bg: `url(${backgroundImg.src})` }}>
+  .container {
+    text-align: center;
+    width: 100%;
+    background: var(--bg);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+  }
+
+  .logo {
+    width: 50%;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .social-icons img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .social-icons img:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+  }
+</style>
