@@ -7,39 +7,37 @@ import leftImg from "@/assets/Patterns.svg";
 import rightImg from "@/assets/Image 1.svg";
 ---
 
-<div class="w-full h-[60vh] flex mt-3 ">
-  <div class="hidden  w-[50%] md:flex flex-col ">
-    <div class=" w-full h-[70%]  flex mt-30  items-center ">
-      <div class="w-4/5 px-20  flex-col items-center justify-center">
-        <h1 class="font-poppins text-8xl font-extrabold leading-[76.8px] text-left underline from-font decoration-transparent ">
-          Your Trusted Guide to
-        </h1>
-        <h2 class="text-4xl text-primary font-semibold mt-4 font-poppins text-6xl font-extrabold leading-[61.44px] text-left underline from-font decoration-transparent ">Global Education</h2>
-        <p class="text-[20px] mt-4 text-gray-700 ">
-          At MentorGence, we are dedicated to providing students with trusted
-          guidance on their journey to pursuing higher education abroad. We work
-          closely with students, parents, and partner universities to create clear
-          pathways to global learning opportunities.
-        </p>
-      </div>
-    </div>
 
-    <div class=" w-full h-[30%] flex items-center px-20 gap-3 ">
-
+<div class="hidden md:flex w-full h-[80vh] mt-4">
+  <div class="flex-col flex  w-[55%] h-full text-left px-[10%] py-[5%]">
+    <h1 class="text-7xl font-extrabold leading-[76.8px] text-left underline-from-font no-underline w-[80%]">
+      Your Trusted Guide to
+    </h1>
+    <h1 class="text-5xl font-extrabold leading-[61.44px] text-left underline-from-font no-underline  text-primary">
+      Global Education
+    </h1>
+    <p class="text-base font-normal leading-[32px] text-left underline-from-font no-underline w-[70%] text-[#536288]">
+      At MentorGence, we are dedicated to providing students with trusted guidance on their journey to pursuing higher education abroad. We work closely with students, parents, and partner universities to create clear pathways to global learning opportunities.
+    </p>
+    <div class=" w-full h-[30%] flex items-center  gap-3 ">
+  
       <h3 class="text-lg font-medium">Partnered with</h3>
       <Image src={logo1} alt="Harvard University" class="h-13" />
       <Image src={logo2} alt="University of Michigan" class="h-13" />
     </div>
-  </div>
-
-  <div class="md:w-[15%]   flex items-center  w-[30%] h-full">
-    <Image src={leftImg} alt="Shape" class=" w-full h-full   float-right  md:mx-96  mx-20  " />
-  </div>
-
-  <div class="flex md:w-[35%]  w-[70%] ">
-    <div class="">
-      <Image src={rightImg} alt="Image" class="w-full h-full md:mx-32" />
     </div>
+  <div class="  w-[45%]  h-full "style="background-image: url('/src/assets/images/Patterns.svg'); background-size: 55%;  background-repeat: no-repeat; background-position: left top ;">
+    <Image src={rightImg} alt="Image" class=" h-full float-right" />
 
+  </div>
+
+</div>
+
+
+<div class="flex md:hidden">
+  <div class="w-full h-[60vh]  " style="background-image: url('/src/assets/images/Patterns.svg'); background-size: 80%;  background-repeat: no-repeat; background-position: left center;">
+    <Image src={rightImg} alt="Image" class="w-[70%]  h-full md:mx-32 float-right" />
   </div>
 </div>
+
+

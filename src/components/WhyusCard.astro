@@ -15,10 +15,11 @@ const bgStyle = Astro.props.alternate ? "bg-[#F5F9FE]" : "bg-white";
   class={"flex flex-col p-[10%] transition duration-1000 hover:shadow-lg hover:-translate-x-[10px] hover:-translate-y-[10px] hover:rounded-md " + bgStyle} 
 >
   <div class={"w-[70px] h-[70px] mb-[10%] rounded-full " + circleStyle}></div>
-  <h3 class="text-[24px] font-medium leading-[28.8px] text-black">{Astro.props.title}</h3>
+  <h3 class="font-work-sanse text-[24px] font-medium leading-[28.8px] text-[#0F2F64]">{Astro.props.title}</h3>
   <div
-    class="w-[40px] h-[40px] flex items-center justify-center mt-[10%] rounded-full transition-transform duration-500 hover:bg-[#408dff] hover:scale-125"
+    class=" bg-white w-[40px] h-[40px] flex items-center justify-center mt-[10%] rounded-full transition-transform duration-500 hover:bg-[#408dff] hover:scale-125"
   >
-    <Image src={arrowImg} alt="arrow" />
+  <Image src={arrowImg} alt="arrow"  />
+
   </div>
 </div>

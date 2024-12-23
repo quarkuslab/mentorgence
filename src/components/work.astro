@@ -87,19 +87,20 @@ import ValuesCard from "@/components/ValuesCard.astro";
     <div class="bottom w-full h-[20%]"></div>
   </div>
   --- -->
+<!--   
 <div
-  class="w-full my-20 px-4 bg-[#F5F9FE]"
+  class="w-full my-20 px-4 bg-[#F5F9FE] "
   style="background-image: url('/src/assets/Pattern.svg') ; background-repeat: no-repeat;"
 >
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Title Section -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8  m-auto ">
+    
     <div class="col-span-1 md:col-span-3 text-center py-10">
       <h3 class=" hidden md:block text-4xl md:text-6xl font-medium mx-[30%] ">
         Our <span class="text-primary"> Values </span> and <span class="text-primary"> Mission </span>
       </h3>
       <h3 class="md:hidden sm:flex text-4xl md:text-6xl font-medium text-center mt-20">How We<span class="text-primary"> Works</span> </h3>
     </div>
-    <!-- Values Cards -->
+    
     <ValuesCard
       title="Values"
       para="Integrity, commitment, and student success are our core values."
@@ -110,7 +111,42 @@ import ValuesCard from "@/components/ValuesCard.astro";
       para="We guide students to make informed choices for higher education."
       url="src/assets/images/2.svg"
     />
+    <ValuesCard 
+      title="Focus"
+      para="Helping students secure placements in top global universities."
+      url="src/assets/images/3.svg"
+    />
+  </div>
+</div> --><div
+  class="w-full my-20 px-4 bg-[#F5F9FE]"
+  style="background-image: url('/src/assets/Pattern.svg'); background-repeat: no-repeat;"
+>
+  <div class="col-span-1 md:col-span-3 text-center py-10">
+    <h3 class="hidden md:block text-4xl md:text-6xl font-medium mx-[30%]">
+      Our <span class="text-primary"> Values </span> and <span class="text-primary"> Mission </span>
+    </h3>
+    <h3 class="md:hidden sm:flex text-4xl md:text-6xl font-medium text-center mt-20">
+      How We<span class="text-primary"> Works</span>
+    </h3>
+  </div>
+  
+  <div class="flex flex-col items-center b md:grid md:grid-cols-3 md:gap-8 md:justify-items-center md:items-center w-full">
     <ValuesCard
+     color="#FFE8B3" 
+      title="Values"
+      para="Integrity, commitment, and student success are our core values."
+      url="src/assets/images/1.svg"
+    />
+    <ValuesCard
+     color= "#BEA6FF"
+
+      title="Mission"
+      para="We guide students to make informed choices for higher education."
+      url="src/assets/images/2.svg"
+    />
+    <ValuesCard
+    color= "#51EAE4"
+
       title="Focus"
       para="Helping students secure placements in top global universities."
       url="src/assets/images/3.svg"

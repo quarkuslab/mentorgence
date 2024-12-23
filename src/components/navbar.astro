@@ -3,7 +3,7 @@ import logoImg from "@/assets/Group.svg";
 import { Image } from "astro:assets";
 ---
 
-<div>
+<div >
   <div class="px-10 py-5 flex items-center justify-between">
     <div class="h-10">
       <Image src={logoImg} alt="logo" />
@@ -15,20 +15,25 @@ import { Image } from "astro:assets";
         <a href="#" class="link">Support</a>
       </div>
       <div>
-        <button class="bg-primary rounded-md px-5 py-3 text-white font-medium">
+        <button class="bg-primary rounded-md px-2 py-2  text-white font-medium">
           Register Now
         </button>
       </div>
-
     </div>
     
-    <div class="md:hidden">
-      <button class="bg-primary rounded-md px-5 py-3 text-white font-medium">
+    <div class="md:hidden flex  items-center ">
+      <button class="bg-primary rounded-md px-2 py-2  text-white font-medium">
         Register Now
       </button>
-      <button class="mx-2">Menu</button>
+
+      <button class="ml-5 ">      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 26 26">
+        <path d="M 0 4 L 0 6 L 26 6 L 26 4 Z M 0 12 L 0 14 L 26 14 L 26 12 Z M 0 20 L 0 22 L 26 22 L 26 20 Z"></path>
+        </svg>
+      </button>
     </div>
+    
   </div>
+
 </div>
 
 <style>
